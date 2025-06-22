@@ -1,0 +1,232 @@
+# ZynqCrypt-SoC - Git Ignore File
+
+# =============================================================================
+# BUILD ARTIFACTS & GENERATED FILES
+# =============================================================================
+
+# Linux kernel module build artifacts
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+modules.order
+Module.symvers
+.tmp_versions/
+*.cmd
+.*.cmd
+
+# C/C++ build artifacts
+*.a
+*.lib
+*.dll
+*.exe
+*.out
+*.elf
+*.elf.size
+*.map
+*.lst
+*.hex
+*.bin
+
+# =============================================================================
+# XILINX VIVADO GENERATED FILES
+# =============================================================================
+
+# Vivado project files
+*.cache/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.hw/
+*.gen/
+*.tmp/
+*.log
+*.jou
+*.str
+*.zip
+*.pb
+*.rpt
+*.rpx
+*.dcp
+*.vds
+*.backup.*
+*.lpr
+vivado_pid*.str
+vivado_pid*.zip
+vitis_pid*.str
+usage_statistics_webtalk.*
+.Xil/
+webtalk_pa.xml
+__synthesis_is_complete__
+*.bda
+
+# Vivado IP core edit projects
+edit_*_v*.*/
+ip_repo/edit_*/
+
+# =============================================================================
+# XILINX VITIS/SDK WORKSPACE
+# =============================================================================
+
+# Vitis workspace metadata
+.metadata/
+.sdk/
+RemoteSystemsTempFiles/
+*.prj
+*.sprj
+*_system.sprj
+*.build.ui.log
+IDE.log
+
+# Platform and BSP generated files
+platform.tcl
+platform.spr
+system.mss
+*.spec
+Xilinx.spec
+*.xpfm
+*.spfm
+
+# Debug directories
+Debug/
+Release/
+
+# Vitis exports
+export/
+
+# FSBL build artifacts
+fsbl.elf
+*.d
+dep.mk
+
+# =============================================================================
+# IDE CONFIGURATION FILES
+# =============================================================================
+
+# Eclipse/Vitis IDE
+.cproject
+.project
+.pydevproject
+.settings/
+_ide/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+.vscode/
+
+# =============================================================================
+# DEVICE TREE FILES
+# =============================================================================
+
+# Compiled device tree files
+*.dtb
+*.dtbo
+
+# =============================================================================
+# DUPLICATED DIRECTORIES TO IGNORE
+# =============================================================================
+
+# Remove entire duplicate/test directories
+vitis_test_project/
+standalone_no_interrupt/
+IP_information/
+Device_tree/
+
+# Vitis build logs and temporary files
+Vitis/IDE.log
+Vitis/.analytics
+Vitis/.metadata/
+Vitis/final/Debug/
+Vitis/final/_ide/
+Vitis/system_wrapper_final/logs/
+Vitis/system_wrapper_final/zynq_fsbl/*.d
+Vitis/system_wrapper_final/zynq_fsbl/*.o
+Vitis/system_wrapper_final/zynq_fsbl/*.elf
+
+# =============================================================================
+# LINUX BUILD ARTIFACTS
+# =============================================================================
+
+# Linux driver work files (duplicates)
+Linux_driver_and_application/work_file/
+
+# But keep these specific executables
+!Linux_driver_and_application/crypto_test
+!Linux_driver_and_application/crypto_workflow
+!Linux_driver_and_application/led_control
+!Linux_driver_and_application/switch_read
+
+# =============================================================================
+# GENERAL TEMPORARY & SYSTEM FILES
+# =============================================================================
+
+# Backup files
+*~
+*.bak
+*.orig
+*.swp
+*.swo
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =============================================================================
+# PROGRAMMING LANGUAGE ARTIFACTS
+# =============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# TCL
+*.tcl
+!scripts/*.tcl
+!hw/integrator/xdc/*.tcl
+
+# =============================================================================
+# OUTPUT FILES TO KEEP
+# =============================================================================
+
+# Keep important bitstreams and hardware exports
+!hw/integrator/*.bit
+!hw/integrator/*.xsa
+!hw/integrator/system_wrapper_final.xsa
+
+# Keep source files
+!sw/linux_driver/driver/*.c
+!sw/linux_driver/driver/*.h
+!sw/linux_driver/test/*.c
+
+# Keep documentation
+!doc/*.md
+!README.md
+!*/README.md
+
+# =============================================================================
+# ARCHIVE FILES
+# =============================================================================
+
+*.tar.gz
+*.tar.bz2
+*.tgz
+*.zip
+*.7z
+*.rar
+*.iso
